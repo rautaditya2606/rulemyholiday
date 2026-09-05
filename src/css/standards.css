@@ -1,0 +1,177 @@
+/* ==========================================================================
+   THE RULEMYHOLIDAY STANDARD (CUSTOMERS FIRST. ZERO COMPROMISE.)
+   ========================================================================== */
+
+.standards-section {
+  padding: 104px 0;
+  background-color: var(--primary-navy-dark);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.standards-section::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 146, 10, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.standards-section .section-title {
+  color: var(--color-white);
+}
+
+.standards-section .section-subtitle {
+  color: var(--color-slate-300);
+}
+
+.comparison-wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+/* Card: Ordinary Aggregators */
+.standard-card.ordinary-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+}
+
+.standard-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.standard-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-slate-300);
+}
+
+.standard-feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.standard-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 0.92rem;
+  color: var(--color-slate-400);
+  line-height: 1.5;
+}
+
+.standard-feature-item svg.icon-cross {
+  color: #EF4444;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Card: RuleMyHoliday Standard (Premium Gold Border) */
+.standard-card.rule-card {
+  background: linear-gradient(135deg, rgba(26, 43, 74, 0.9) 0%, rgba(15, 26, 45, 0.95) 100%);
+  border: 2px solid var(--accent-gold);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4),
+              0 0 30px rgba(201, 146, 10, 0.2);
+  position: relative;
+}
+
+.standard-badge-popular {
+  position: absolute;
+  top: -14px;
+  right: 32px;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+  color: var(--primary-navy-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px rgba(201, 146, 10, 0.4);
+}
+
+.standard-card.rule-card .standard-card-title {
+  color: var(--accent-gold);
+}
+
+.standard-card.rule-card .standard-feature-item {
+  color: var(--color-white);
+}
+
+.standard-feature-item svg.icon-check {
+  color: var(--accent-gold);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@media (max-width: 820px) {
+  .standards-section {
+    padding: 64px 0;
+  }
+
+  .comparison-wrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .standards-section {
+    padding: 52px 0;
+  }
+
+  .standard-card.ordinary-card,
+  .standard-card.rule-card {
+    padding: 24px 18px;
+    border-radius: var(--radius-lg);
+  }
+
+  .standard-card-header {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+  }
+
+  .standard-card-title {
+    font-size: 1.15rem;
+  }
+
+  .standard-badge-popular {
+    right: 16px;
+    top: -11px;
+    font-size: 0.65rem;
+    padding: 4px 10px;
+  }
+
+  .standard-feature-list {
+    gap: 12px;
+  }
+
+  .standard-feature-item {
+    font-size: 0.85rem;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,339 @@
+/* ==========================================================================
+   OVERLAPPING LUXURY SEARCH BAR
+   ========================================================================== */
+
+.search-section {
+  position: relative;
+  z-index: 35;
+  margin-top: -64px;
+  padding-bottom: 24px;
+}
+
+.search-card-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 24px 64px -12px rgba(15, 26, 45, 0.18),
+              0 0 0 1px rgba(26, 43, 74, 0.06);
+  padding: 12px 16px 20px 16px;
+  transition: transform var(--duration-fast) var(--ease-smooth),
+              box-shadow var(--duration-fast) var(--ease-smooth);
+}
+
+.search-card-wrapper:hover {
+  box-shadow: 0 32px 72px -12px rgba(15, 26, 45, 0.22),
+              0 0 0 1px rgba(201, 146, 10, 0.2);
+}
+
+/* Tabs: Holidays (active, navy bg), Flights, Hotels, Experiences, Custom Trip */
+.search-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px;
+  border-bottom: 1px solid var(--color-slate-100);
+  margin-bottom: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.search-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.search-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-slate-600);
+  background-color: transparent;
+  white-space: nowrap;
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.search-tab-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.search-tab-btn:hover {
+  color: var(--primary-navy);
+  background-color: var(--color-slate-100);
+}
+
+/* Active tab: Navy background */
+.search-tab-btn.active {
+  background-color: var(--primary-navy);
+  color: var(--color-white);
+  box-shadow: 0 4px 14px rgba(26, 43, 74, 0.25);
+}
+
+.search-tab-btn.active svg {
+  color: var(--accent-gold);
+}
+
+/* Three input fields in a row + Gold "Explore Now →" button */
+.search-form {
+  display: grid;
+  grid-template-columns: 1.4fr 1.3fr 1.1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 0 6px;
+}
+
+.search-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  background-color: var(--color-slate-50);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.search-field:hover, .search-field:focus-within {
+  background-color: var(--color-white);
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 16px rgba(201, 146, 10, 0.12);
+}
+
+.field-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(26, 43, 74, 0.06);
+  color: var(--primary-navy);
+  flex-shrink: 0;
+}
+
+.search-field:focus-within .field-icon {
+  background: var(--accent-gold-subtle);
+  color: var(--accent-gold-dark);
+}
+
+.field-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.field-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-slate-400);
+  margin-bottom: 2px;
+}
+
+.field-input {
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  outline: none;
+  width: 100%;
+  padding: 0;
+}
+
+.field-input::placeholder {
+  color: var(--color-slate-400);
+  font-weight: 400;
+}
+
+/* Refined Luxury "Explore Now" Button */
+.btn-search-submit {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 36px;
+  height: 100%;
+  min-height: 64px;
+  background: var(--primary-navy);
+  color: #FFFFFF;
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--accent-gold);
+  box-shadow: 0 8px 24px -6px rgba(15, 26, 45, 0.35);
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background var(--duration-normal) var(--ease-smooth),
+              border-color var(--duration-normal) var(--ease-smooth),
+              box-shadow var(--duration-normal) var(--ease-smooth),
+              transform var(--duration-fast) var(--ease-smooth);
+}
+
+/* Subtle Specular Sheen Sweep */
+.btn-search-submit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.75s var(--ease-smooth);
+  pointer-events: none;
+}
+
+.btn-search-submit:hover::before {
+  left: 140%;
+}
+
+.btn-search-submit:hover {
+  background: var(--primary-navy-dark);
+  border-color: var(--accent-gold-light);
+  box-shadow: 0 12px 30px -4px rgba(15, 26, 45, 0.5),
+              0 0 16px rgba(201, 146, 10, 0.25),
+              inset 0 0 0 1px rgba(201, 146, 10, 0.4);
+}
+
+.btn-search-submit:active {
+  background: var(--primary-navy-surface);
+}
+
+.btn-search-submit svg {
+  width: 17px;
+  height: 17px;
+  color: var(--accent-gold);
+  transition: color var(--duration-normal) var(--ease-smooth);
+}
+
+.btn-search-submit:hover svg {
+  color: #FFFFFF;
+}
+
+/* Dropdown suggestions popover */
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  min-width: 260px;
+  background: var(--color-white);
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  padding: 8px;
+  display: none;
+  z-index: 50;
+}
+
+.search-dropdown.is-open {
+  display: block;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--duration-fast);
+}
+
+.dropdown-item:hover {
+  background: var(--color-slate-100);
+}
+
+.dropdown-item strong {
+  color: var(--primary-navy);
+  display: block;
+  font-size: 0.9rem;
+}
+
+.dropdown-item small {
+  color: var(--color-slate-400);
+  font-size: 0.75rem;
+}
+
+/* Responsiveness */
+@media (max-width: 960px) {
+  .search-section {
+    margin-top: -44px;
+    padding-bottom: 20px;
+  }
+
+  .search-card-wrapper {
+    border-radius: var(--radius-lg);
+    padding: 12px 12px 18px;
+  }
+
+  .search-tabs {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+
+  .search-tab-btn {
+    scroll-snap-align: start;
+    padding: 8px 15px;
+    font-size: 0.84rem;
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .search-field {
+    padding: 10px 14px;
+  }
+
+  /* Prevent iOS zoom on inputs by ensuring >= 16px font-size */
+  .field-input {
+    font-size: 16px;
+  }
+
+  .btn-search-submit {
+    width: 100%;
+    min-height: 52px;
+    font-size: 0.95rem;
+  }
+
+  .search-dropdown {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-section {
+    margin-top: -32px;
+  }
+
+  .search-card-wrapper {
+    box-shadow: 0 16px 40px -10px rgba(15, 26, 45, 0.16);
+  }
+
+  .field-icon {
+    width: 34px;
+    height: 34px;
+  }
+}

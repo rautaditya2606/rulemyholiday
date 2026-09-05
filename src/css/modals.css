@@ -1,0 +1,400 @@
+/* ==========================================================================
+   LUXURY MODALS & DRAWERS (AI TRIP PLANNER & ENQUIRE CONCIERGE)
+   ========================================================================== */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 18, 32, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-normal) var(--ease-smooth);
+}
+
+.modal-backdrop.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-dialog {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--accent-gold-border);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-smooth);
+}
+
+.modal-backdrop.is-active .modal-dialog {
+  opacity: 1;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--color-slate-100);
+  color: var(--color-slate-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all var(--duration-fast);
+}
+
+.modal-close-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+}
+
+.modal-header-luxury {
+  padding: 32px 32px 20px;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-surface) 100%);
+  color: var(--color-white);
+  border-top-left-radius: var(--radius-xl);
+  border-top-right-radius: var(--radius-xl);
+  position: relative;
+}
+
+.modal-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-gold);
+  margin-bottom: 8px;
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 6px;
+}
+
+.modal-description {
+  font-size: 0.9rem;
+  color: var(--color-slate-300);
+  line-height: 1.5;
+}
+
+.modal-body {
+  padding: 32px;
+}
+
+/* AI Planner Interactive Step Elements */
+.ai-form-group {
+  margin-bottom: 24px;
+}
+
+.ai-form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.vibe-pills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.vibe-choice-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--color-slate-50);
+  border: 1.5px solid var(--color-slate-200);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-slate-700);
+  transition: all var(--duration-fast);
+}
+
+.vibe-choice-pill:hover, .vibe-choice-pill.active {
+  border-color: var(--accent-gold);
+  background: var(--color-white);
+  color: var(--primary-navy);
+  box-shadow: 0 4px 12px rgba(201, 146, 10, 0.15);
+}
+
+.vibe-choice-pill.active {
+  border-width: 2px;
+  background: var(--accent-gold-subtle);
+}
+
+.ai-duration-slider {
+  display: flex;
+  gap: 12px;
+}
+
+.duration-opt {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--color-slate-100);
+  border: 1px solid var(--color-slate-200);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+
+.duration-opt.active {
+  background: var(--primary-navy);
+  color: var(--color-white);
+  border-color: var(--primary-navy);
+}
+
+/* AI Results Box */
+.ai-results-box {
+  display: none;
+  background: var(--color-slate-50);
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-top: 24px;
+  animation: fadeIn 0.4s ease;
+}
+
+.ai-results-box.is-visible {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.ai-itinerary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-slate-200);
+}
+
+.ai-itinerary-destination {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.ai-itinerary-estimate {
+  font-weight: 800;
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+}
+
+.ai-day-card {
+  padding: 14px 16px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-slate-200);
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.ai-day-card:hover {
+  border-color: rgba(26, 43, 74, 0.25);
+  box-shadow: var(--shadow-md);
+}
+
+.ai-day-title {
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 4px;
+}
+
+/* Enquire Input Form */
+.enquire-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.form-full-width {
+  grid-column: span 2;
+}
+
+.luxury-input-field {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--color-slate-50);
+  border: 1.5px solid var(--color-slate-200);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  color: var(--color-slate-800);
+  outline: none;
+  transition: all var(--duration-fast);
+}
+
+.luxury-input-field:focus {
+  border-color: var(--accent-gold);
+  background: var(--color-white);
+  box-shadow: 0 0 0 4px rgba(201, 146, 10, 0.12);
+}
+
+/* Toast Message */
+.luxury-toast {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-navy-dark);
+  color: var(--color-white);
+  border: 1.5px solid var(--accent-gold);
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease-smooth);
+}
+
+.luxury-toast.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.luxury-toast svg {
+  color: var(--accent-gold);
+  width: 20px;
+  height: 20px;
+}
+
+/* ==========================================================================
+   MODAL MOBILE RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 640px) {
+  .modal-backdrop {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .modal-dialog {
+    max-height: 92vh;
+    border-radius: var(--radius-lg);
+  }
+
+  .modal-header-luxury {
+    padding: 22px 20px 16px;
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+  }
+
+  .modal-close-btn {
+    top: 14px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+  }
+
+  .modal-description {
+    font-size: 0.82rem;
+  }
+
+  .modal-body {
+    padding: 20px 16px;
+  }
+
+  .ai-form-group {
+    margin-bottom: 18px;
+  }
+
+  .enquire-form-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-full-width {
+    grid-column: span 1;
+  }
+
+  .luxury-input-field {
+    font-size: 16px;
+    padding: 11px 14px;
+  }
+
+  .ai-itinerary-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .luxury-toast {
+    width: calc(100% - 32px);
+    max-width: 400px;
+    padding: 12px 18px;
+    font-size: 0.82rem;
+    bottom: 20px;
+    border-radius: var(--radius-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .vibe-pills-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .vibe-choice-pill {
+    padding: 10px 14px;
+    font-size: 0.84rem;
+  }
+
+  .ai-duration-slider {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .duration-opt {
+    flex: 1 1 calc(50% - 8px);
+    padding: 8px;
+  }
+}

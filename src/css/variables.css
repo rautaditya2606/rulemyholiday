@@ -1,0 +1,68 @@
+:root {
+  /* Brand Colors */
+  --primary-navy: #1A2B4A;
+  --primary-navy-dark: #0F1A2D;
+  --primary-navy-light: #253E6A;
+  --primary-navy-surface: #132038;
+  --accent-gold: #C9920A;
+  --accent-gold-light: #E5AC25;
+  --accent-gold-dark: #A57404;
+  --accent-gold-glow: rgba(201, 146, 10, 0.28);
+  --accent-gold-subtle: rgba(201, 146, 10, 0.12);
+  --accent-gold-border: rgba(201, 146, 10, 0.35);
+
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-ivory: #FDFBF7;
+  --color-warm-cream: #F8F5EE;
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+
+  /* Status / Utility */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-dark: #1EBE5D;
+  --color-online-green: #10B981;
+  --color-trustpilot: #00B67A;
+  --color-tripadvisor: #00AA6C;
+  --color-google-blue: #4285F4;
+  --color-google-red: #EA4335;
+  --color-google-yellow: #FBBC05;
+  --color-google-green: #34A853;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transitions */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-editorial: cubic-bezier(0.25, 1, 0.5, 1);
+  --duration-fast: 200ms;
+  --duration-normal: 350ms;
+  --duration-slow: 700ms;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 26, 45, 0.08), 0 1px 2px rgba(15, 26, 45, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 26, 45, 0.08), 0 2px 4px rgba(15, 26, 45, 0.04);
+  --shadow-lg: 0 12px 32px -4px rgba(15, 26, 45, 0.12), 0 4px 8px -2px rgba(15, 26, 45, 0.06);
+  --shadow-xl: 0 20px 48px -8px rgba(15, 26, 45, 0.16), 0 8px 16px -4px rgba(15, 26, 45, 0.08);
+  --shadow-gold: 0 8px 24px -4px rgba(201, 146, 10, 0.35);
+  --shadow-floating: 0 24px 60px -12px rgba(15, 26, 45, 0.35);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --container-max: 1240px;
+  --navbar-height: 84px;
+}

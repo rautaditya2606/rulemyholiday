@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RuleMyHoliday.com | The World, On Your Terms | Bespoke Luxury Travel</title>
+  <meta name="description" content="Award-winning luxury travel experiences curated to perfection. From private island overwater sanctuaries to alpine chalets. The world, on your terms.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Premium Typography: Playfair Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Modular Styles -->
+  <link rel="stylesheet" href="/src/css/variables.css">
+  <link rel="stylesheet" href="/src/css/base.css">
+  <link rel="stylesheet" href="/src/css/navbar.css">
+  <link rel="stylesheet" href="/src/css/hero.css">
+  <link rel="stylesheet" href="/src/css/search.css">
+  <link rel="stylesheet" href="/src/css/trust-social.css">
+  <link rel="stylesheet" href="/src/css/curated-holidays.css">
+  <link rel="stylesheet" href="/src/css/standards.css">
+  <link rel="stylesheet" href="/src/css/itinerary-preview.css">
+  <link rel="stylesheet" href="/src/css/testimonials.css">
+  <link rel="stylesheet" href="/src/css/footer.css">
+  <link rel="stylesheet" href="/src/css/modals.css">
+  <link rel="stylesheet" href="/src/css/floating-side.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVBAR
+       ========================================================================= -->
+  <header class="navbar" id="mainNavbar">
+    <div class="navbar-container">
+      <!-- Logo Left -->
+      <a href="#" class="nav-brand" aria-label="RuleMyHoliday Home">
+        <span class="brand-logo-text">RuleMyHoliday<span class="gold-dot">.</span>com</span>
+        <span class="brand-tagline">Bespoke Travel. Unrivalled Access.</span>
+      </a>
+
+      <!-- Nav Links Center -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#curated-holidays" class="nav-link">Holidays</a></li>
+          <li><a href="#itinerary-showcase" class="nav-link">Experiences</a></li>
+          <li><a href="#destinations" class="nav-link">Destinations</a></li>
+          <li><a href="#standards" class="nav-link">About Us</a></li>
+          <li><a href="#footer" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Phone Number + dark navy "Enquire Now" CTA button -->
+      <div class="nav-actions">
+        <a href="tel:+917899365286" class="nav-phone" title="Call Concierge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <span>+91 78993 65286</span>
+        </a>
+        <button class="btn-enquire trigger-enquire-modal" data-trip="VIP Bespoke Inquiry">
+          Enquire Now
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION (FULL VIEWPORT HEIGHT, KEN BURNS, ASYMMETRIC OVERLAY)
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <!-- Ken Burns Background (Maldives Couple on Overwater Deck) -->
+    <div class="hero-bg-wrapper">
+      <img src="/images/hero-maldives.jpg" alt="Luxury Maldives Overwater Villa with Couple at Sunset" class="hero-bg-image" loading="eager" priority="true">
+    </div>
+
+    <!-- Dark Gradient Overlay (Left side dark for readability, right side stays visible) -->
+    <div class="hero-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <div class="hero-text-card">
+        <!-- Headline: Staggered Fade-Up on load -->
+        <h1 class="hero-headline">
+          <span class="headline-part-1">The World,</span>
+          <span class="headline-part-2">On Your Terms.</span>
+        </h1>
+
+        <!-- Subtext: Fades in after headline -->
+        <p class="hero-subtext">
+          Private island sanctuaries, bespoke yacht expeditions, and rare cultural voyages—handcrafted exclusively for those who demand the extraordinary.
+        </p>
+
+        <!-- Editorial Hallmark Strip -->
+        <div class="hero-hallmark-strip">
+          <div class="hallmark-point">
+            <span class="point-index">01</span>
+            <span class="point-text">Private Expeditions</span>
+          </div>
+          <div class="hallmark-point">
+            <span class="point-index">02</span>
+            <span class="point-text">Unrivalled Access</span>
+          </div>
+          <div class="hallmark-point">
+            <span class="point-index">03</span>
+            <span class="point-text">Discreet 24/7 Concierge</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SEARCH BAR (BELOW HERO IMAGE, OVERLAPPING)
+       ========================================================================= -->
+  <section class="search-section">
+    <div class="container">
+      <div class="search-card-wrapper">
+        <!-- Tabs: Holidays (active, navy bg), Flights, Hotels, Experiences, Custom Trip -->
+        <div class="search-tabs" role="tablist">
+          <button class="search-tab-btn active" data-tab="holidays" role="tab">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M13 10l6 3v8"/></svg>
+            <span>Holidays</span>
+          </button>
+          <button class="search-tab-btn" data-tab="flights" role="tab">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+            <span>Flights</span>
+          </button>
+          <button class="search-tab-btn" data-tab="hotels" role="tab">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0H5m14 0h2M5 21H3m6-12h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg>
+            <span>Hotels</span>
+          </button>
+          <button class="search-tab-btn" data-tab="experiences" role="tab">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>Experiences</span>
+          </button>
+          <button class="search-tab-btn" data-tab="custom" role="tab">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            <span>Custom Trip</span>
+          </button>
+        </div>
+
+        <!-- Three Input Fields + Gold "Explore Now →" Button -->
+        <form class="search-form" id="heroSearchForm">
+          <!-- Field 1: Where to? with pin icon -->
+          <div class="search-field" id="whereToField">
+            <div class="field-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div class="field-content">
+              <label class="field-label" for="searchDestinationInput">Where to?</label>
+              <input type="text" id="searchDestinationInput" class="field-input" placeholder="Maldives, Swiss Alps, Amalfi..." autocomplete="off">
+            </div>
+
+            <!-- Autocomplete Suggestions -->
+            <div class="search-dropdown" id="searchDropdown">
+              <div class="dropdown-item" data-destination="Maldives Luxury Overwater Villas">
+                <div>
+                  <strong>Maldives Private Atolls</strong>
+                  <small>Overwater bungalows, private reef dining</small>
+                </div>
+              </div>
+              <div class="dropdown-item" data-destination="Amalfi Coast & Positano, Italy">
+                <div>
+                  <strong>Amalfi Coast & Capri</strong>
+                  <small>Cliffside luxury suites, private Riva yacht</small>
+                </div>
+              </div>
+              <div class="dropdown-item" data-destination="Zermatt & Swiss Alps Chalets">
+                <div>
+                  <strong>Swiss Alps Chalets</strong>
+                  <small>Matterhorn views, private heliskiing & fireside</small>
+                </div>
+              </div>
+              <div class="dropdown-item" data-destination="Bali Rainforest Sanctuary">
+                <div>
+                  <strong>Ubud, Bali</strong>
+                  <small>Hanging Gardens villas, holistic wellness</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Field 2: Check In - Check Out with calendar icon -->
+          <div class="search-field">
+            <div class="field-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div class="field-content">
+              <label class="field-label" for="searchDates">Check In - Check Out</label>
+              <input type="text" id="searchDates" class="field-input" value="18 Oct - 26 Oct, 2026" placeholder="Select Travel Dates">
+            </div>
+          </div>
+
+          <!-- Field 3: Travellers with person icon -->
+          <div class="search-field">
+            <div class="field-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+              </svg>
+            </div>
+            <div class="field-content">
+              <label class="field-label" for="searchTravellers">Travellers</label>
+              <input type="text" id="searchTravellers" class="field-input" value="2 Adults, 1 Luxury Villa" placeholder="Add Travellers">
+            </div>
+          </div>
+
+          <!-- Gold "Explore Now →" button -->
+          <button type="submit" class="btn-search-submit">
+            <span>Explore Now</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       TRUST BAR (DARK NAVY BACKGROUND, 5 ICON+TEXT PAIRS, GOLD ICONS, WHITE TEXT)
+       ========================================================================= -->
+  <section class="trust-bar-section">
+    <div class="container">
+      <div class="trust-bar-grid">
+        <!-- 1. Customer First -->
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+            </svg>
+          </div>
+          <div class="trust-text-box">
+            <span class="trust-title">Customer First</span>
+            <span class="trust-subtitle">Your wishes lead our vision</span>
+          </div>
+        </div>
+
+        <!-- 2. Zero Compromise -->
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <div class="trust-text-box">
+            <span class="trust-title">Zero Compromise</span>
+            <span class="trust-subtitle">Vetted 5-star properties only</span>
+          </div>
+        </div>
+
+        <!-- 3. Curated Experiences -->
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+          </div>
+          <div class="trust-text-box">
+            <span class="trust-title">Curated Experiences</span>
+            <span class="trust-subtitle">Handpicked bespoke journeys</span>
+          </div>
+        </div>
+
+        <!-- 4. Best Value -->
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon>
+            </svg>
+          </div>
+          <div class="trust-text-box">
+            <span class="trust-title">Best Value</span>
+            <span class="trust-subtitle">Exclusive perks & upgrades</span>
+          </div>
+        </div>
+
+        <!-- 5. 24/7 Support -->
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+              <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+            </svg>
+          </div>
+          <div class="trust-text-box">
+            <span class="trust-title">24/7 Support</span>
+            <span class="trust-subtitle">Personal concierge on standby</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SOCIAL PROOF STRIP (WHITE BG, GOOGLE 4.8, TRUSTPILOT 4.7, TRIPADVISOR 4.6)
+       ========================================================================= -->
+  <section class="social-proof-section">
+    <div class="container">
+      <div class="social-proof-container">
+        <!-- Headline + Avatars -->
+        <div class="social-proof-header">
+          <h2 class="social-proof-heading">
+            Trusted by <span class="gold-text">Thousands</span> of Happy Travellers
+          </h2>
+
+          <div class="traveller-community-pill">
+            <div class="avatar-stack">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Happy traveller avatar">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Happy traveller avatar">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Happy traveller avatar">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Happy traveller avatar">
+            </div>
+            <div class="community-text">
+              <span class="community-count">
+                10,000+ Happy Travellers
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              </span>
+              <span class="community-label">Worldwide Verified Itineraries</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real Platform Ratings with Authentic Logos/Colors -->
+        <div class="reviews-badges-wrap">
+          <!-- Google 4.8/5 -->
+          <div class="review-badge-card">
+            <svg class="platform-logo-svg" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+              <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+            </svg>
+            <div class="platform-details">
+              <div class="platform-top-row">
+                <span class="platform-name">Google</span>
+                <span class="platform-score">4.8/5</span>
+              </div>
+              <div class="platform-stars">
+                <svg class="star-icon" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="star-icon" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="star-icon" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="star-icon" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg class="star-icon" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+              <span class="platform-reviews-count">3,820+ verified reviews</span>
+            </div>
+          </div>
+
+          <!-- Trustpilot 4.7/5 -->
+          <div class="review-badge-card">
+            <svg class="platform-logo-svg" viewBox="0 0 24 24" fill="#00B67A">
+              <path d="M12 0l3.708 7.514L24 8.746l-6 5.849 1.416 8.261L12 18.956l-7.416 3.9 1.416-8.261-6-5.849 8.292-1.232L12 0z"/>
+            </svg>
+            <div class="platform-details">
+              <div class="platform-top-row">
+                <span class="platform-name">Trustpilot</span>
+                <span class="platform-score">4.7/5</span>
+              </div>
+              <div class="platform-stars">
+                <svg class="star-icon trustpilot-star" viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+                <svg class="star-icon trustpilot-star" viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+                <svg class="star-icon trustpilot-star" viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+                <svg class="star-icon trustpilot-star" viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+                <svg class="star-icon trustpilot-star" viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+              </div>
+              <span class="platform-reviews-count">Excellent Score</span>
+            </div>
+          </div>
+
+          <!-- Tripadvisor 4.6/5 -->
+          <div class="review-badge-card">
+            <svg class="platform-logo-svg" viewBox="0 0 24 24" fill="#00AA6C">
+              <circle cx="12" cy="12" r="10" stroke="#00AA6C" stroke-width="2" fill="none"></circle>
+              <circle cx="8.5" cy="11.5" r="2.5" fill="#00AA6C"></circle>
+              <circle cx="15.5" cy="11.5" r="2.5" fill="#00AA6C"></circle>
+              <path d="M12 7l-2 3h4l-2-3z" fill="#00AA6C"></path>
+            </svg>
+            <div class="platform-details">
+              <div class="platform-top-row">
+                <span class="platform-name">Tripadvisor</span>
+                <span class="platform-score">4.6/5</span>
+              </div>
+              <div class="platform-stars">
+                <svg class="star-icon tripadvisor-bubble" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/></svg>
+                <svg class="star-icon tripadvisor-bubble" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/></svg>
+                <svg class="star-icon tripadvisor-bubble" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/></svg>
+                <svg class="star-icon tripadvisor-bubble" viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/></svg>
+                <svg class="star-icon tripadvisor-bubble" viewBox="0 0 20 20"><circle cx="10" cy="10" r="5"/></svg>
+              </div>
+              <span class="platform-reviews-count">Traveller Choice 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CURATED SIGNATURE HOLIDAYS SECTION
+       ========================================================================= -->
+  <section class="curated-holidays-section" id="curated-holidays">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tagline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Exclusive Destinations
+        </span>
+        <h2 class="section-title">Curated Signature Collections</h2>
+        <p class="section-subtitle">
+          Every journey is tailored around your individual desires. Uncompromising luxury, private guides, and zero ordinary tours.
+        </p>
+      </div>
+
+      <!-- Filter Pills -->
+      <div class="filter-tabs-wrapper reveal-on-scroll">
+        <button class="filter-tab-pill active" data-filter="all">All Sanctuaries</button>
+        <button class="filter-tab-pill" data-filter="island">Private Islands</button>
+        <button class="filter-tab-pill" data-filter="alpine">Alpine Retreats</button>
+        <button class="filter-tab-pill" data-filter="mediterranean">Mediterranean</button>
+        <button class="filter-tab-pill" data-filter="desert">Royal Desert</button>
+        <button class="filter-tab-pill" data-filter="wellness">Spiritual Wellness</button>
+      </div>
+
+      <!-- Holiday Cards Grid -->
+      <div class="holidays-cards-grid">
+        <!-- 1. Maldives Overwater -->
+        <article class="holiday-card reveal-on-scroll" data-category="island">
+          <div class="card-media-wrap">
+            <img src="/images/hero-maldives.jpg" alt="Maldives Overwater Sanctuary" loading="lazy">
+            <span class="card-tag-badge">Ultra Luxury</span>
+            <span class="card-duration-badge">7 Days / 6 Nights</span>
+          </div>
+          <div class="card-body">
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              <span>Maldives, Baa Atoll</span>
+            </div>
+            <h3 class="card-title">Private Lagoon Overwater Villa</h3>
+            <p class="card-desc">
+              Suspended above sapphire coral waters with private infinity pool, dedicated 24-hr butler, and sunset yacht excursions.
+            </p>
+            <div class="card-perks">
+              <span class="perk-pill">All-Inclusive Dining</span>
+              <span class="perk-pill">VIP Seaplane</span>
+              <span class="perk-pill">Spa Suite</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="card-price-label">From</span>
+                <span class="card-price">₹1,85,000 <span>/ person</span></span>
+              </div>
+              <button class="btn-card-explore trigger-enquire-modal" data-trip="Maldives Overwater Villa">Enquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Amalfi Positano -->
+        <article class="holiday-card reveal-on-scroll" data-category="mediterranean">
+          <div class="card-media-wrap">
+            <img src="/images/amalfi.jpg" alt="Positano Amalfi Coast Terrace" loading="lazy">
+            <span class="card-tag-badge">Romance & Yacht</span>
+            <span class="card-duration-badge">6 Days / 5 Nights</span>
+          </div>
+          <div class="card-body">
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              <span>Amalfi Coast, Italy</span>
+            </div>
+            <h3 class="card-title">Positano Cliffside & Private Riva Yacht</h3>
+            <p class="card-desc">
+              Private terrace overlooking the sparkling Tyrrhenian Sea, Michelin-starred cliffside dining, and full-day private boat to Capri.
+            </p>
+            <div class="card-perks">
+              <span class="perk-pill">Private Yacht</span>
+              <span class="perk-pill">Sommelier Tasting</span>
+              <span class="perk-pill">Heli Transfer</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="card-price-label">From</span>
+                <span class="card-price">₹2,45,000 <span>/ person</span></span>
+              </div>
+              <button class="btn-card-explore trigger-enquire-modal" data-trip="Amalfi Coast & Positano">Enquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Swiss Alps Zermatt -->
+        <article class="holiday-card reveal-on-scroll" data-category="alpine">
+          <div class="card-media-wrap">
+            <img src="/images/swiss-alps.jpg" alt="Zermatt Swiss Chalet with Matterhorn" loading="lazy">
+            <span class="card-tag-badge">Alpine Chalet</span>
+            <span class="card-duration-badge">8 Days / 7 Nights</span>
+          </div>
+          <div class="card-body">
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              <span>Zermatt, Switzerland</span>
+            </div>
+            <h3 class="card-title">Matterhorn Luxury Heated Chalet</h3>
+            <p class="card-desc">
+              Floor-to-ceiling alpine glass walls, outdoor cedar hot tub, private chalet chef, and private mountain ski guide.
+            </p>
+            <div class="card-perks">
+              <span class="perk-pill">Private Chef</span>
+              <span class="perk-pill">Glacier Express</span>
+              <span class="perk-pill">Fireside Spa</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="card-price-label">From</span>
+                <span class="card-price">₹2,95,000 <span>/ person</span></span>
+              </div>
+              <button class="btn-card-explore trigger-enquire-modal" data-trip="Swiss Alps Zermatt Chalet">Enquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. Bali Ubud Jungle -->
+        <article class="holiday-card reveal-on-scroll" data-category="wellness">
+          <div class="card-media-wrap">
+            <img src="/images/bali.jpg" alt="Bali Rainforest Jungle Villa" loading="lazy">
+            <span class="card-tag-badge">Holistic Sanctuary</span>
+            <span class="card-duration-badge">7 Days / 6 Nights</span>
+          </div>
+          <div class="card-body">
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              <span>Ubud, Bali</span>
+            </div>
+            <h3 class="card-title">Ayung Valley Floating Sanctuary</h3>
+            <p class="card-desc">
+              Cantilevered infinity pool suspended above tropical canopies, private yoga masters, and sacred water temple cleansing.
+            </p>
+            <div class="card-perks">
+              <span class="perk-pill">Private Pool Villa</span>
+              <span class="perk-pill">Ayurvedic Master</span>
+              <span class="perk-pill">Organic Cuisine</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="card-price-label">From</span>
+                <span class="card-price">₹1,15,000 <span>/ person</span></span>
+              </div>
+              <button class="btn-card-explore trigger-enquire-modal" data-trip="Bali Ubud Sanctuary">Enquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Dubai Desert Oasis -->
+        <article class="holiday-card reveal-on-scroll" data-category="desert">
+          <div class="card-media-wrap">
+            <img src="/images/dubai.jpg" alt="Dubai Royal Desert Camp" loading="lazy">
+            <span class="card-tag-badge">Royal Arabian</span>
+            <span class="card-duration-badge">5 Days / 4 Nights</span>
+          </div>
+          <div class="card-body">
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              <span>Dubai, United Arab Emirates</span>
+            </div>
+            <h3 class="card-title">Royal Dune Majlis & Plunge Pool</h3>
+            <p class="card-desc">
+              Secluded desert villa with private plunge pool, lantern-lit Arabian feasts under stellar skies, and private falconry displays.
+            </p>
+            <div class="card-perks">
+              <span class="perk-pill">Private Chauffeur</span>
+              <span class="perk-pill">Royal Tent Feast</span>
+              <span class="perk-pill">Vintage Land Rover</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="card-price-label">From</span>
+                <span class="card-price">₹1,45,000 <span>/ person</span></span>
+              </div>
+              <button class="btn-card-explore trigger-enquire-modal" data-trip="Dubai Royal Desert Oasis">Enquire</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Kyoto Zen Retreat -->
+        <article class="holiday-card reveal-on-scroll" data-category="wellness">
+          <div class="card-media-wrap">
+            <img src="/images/kyoto.jpg" alt="Kyoto Zen Ryokan Garden" loading="lazy">
+            <span class="card-tag-badge">Heritage Luxury</span>
+            <span class="card-duration-badge">6 Days / 5 Nights</span>
+          </div>
+          <div class="card-body">
+            <div class="card-location">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+              <span>Kyoto, Japan</span>
+            </div>
+            <h3 class="card-title">Private Temple Garden Ryokan</h3>
+            <p class="card-desc">
+              Centuries-old cedar ryokan with private onsen bath, private tea ceremony with Grandmaster, and VIP temple night tours.
+            </p>
+            <div class="card-perks">
+              <span class="perk-pill">Kaiseki Banquet</span>
+              <span class="perk-pill">Private Onsen</span>
+              <span class="perk-pill">Kyoto Historian</span>
+            </div>
+            <div class="card-footer">
+              <div class="card-price-wrap">
+                <span class="card-price-label">From</span>
+                <span class="card-price">₹2,65,000 <span>/ person</span></span>
+              </div>
+              <button class="btn-card-explore trigger-enquire-modal" data-trip="Kyoto Zen Ryokan">Enquire</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       THE RULEMYHOLIDAY STANDARD (CUSTOMERS FIRST. ZERO COMPROMISE.)
+       ========================================================================= -->
+  <section class="standards-section" id="standards">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tagline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Our Uncompromising Promise
+        </span>
+        <h2 class="section-title">The RuleMyHoliday Standard</h2>
+        <p class="section-subtitle">
+          We built RuleMyHoliday on an uncompromising philosophy: your holiday must be flawless from the second you dream it to your return home.
+        </p>
+      </div>
+
+      <div class="comparison-wrapper reveal-on-scroll">
+        <!-- Ordinary Agencies -->
+        <div class="standard-card ordinary-card">
+          <div class="standard-card-header">
+            <h3 class="standard-card-title">Standard Booking Portals</h3>
+          </div>
+          <ul class="standard-feature-list">
+            <li class="standard-feature-item">
+              <svg class="icon-cross" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              <span>Generic, pre-packaged group tours with rigid timelines</span>
+            </li>
+            <li class="standard-feature-item">
+              <svg class="icon-cross" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              <span>Automated bot support and offshore call center queues</span>
+            </li>
+            <li class="standard-feature-item">
+              <svg class="icon-cross" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              <span>Unverified hotel ratings with hidden resort and transfer fees</span>
+            </li>
+            <li class="standard-feature-item">
+              <svg class="icon-cross" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              <span>You are on your own if flights delay or reservations falter</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- RuleMyHoliday Guarantee -->
+        <div class="standard-card rule-card">
+          <span class="standard-badge-popular">RuleMyHoliday Guarantee</span>
+          <div class="standard-card-header">
+            <h3 class="standard-card-title">Customers First. Zero Compromise.</h3>
+          </div>
+          <ul class="standard-feature-list">
+            <li class="standard-feature-item">
+              <svg class="icon-check" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>100% Bespoke Itineraries:</strong> Handcrafted to your specific rhythm, preferences, and desires.</span>
+            </li>
+            <li class="standard-feature-item">
+              <svg class="icon-check" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>Dedicated 24/7 Human Concierge:</strong> One direct specialist assigned to you from inception to return.</span>
+            </li>
+            <li class="standard-feature-item">
+              <svg class="icon-check" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>Strict Zero-Compromise Vetting:</strong> In-person verified villas, complimentary room upgrades, all-inclusive transparency.</span>
+            </li>
+            <li class="standard-feature-item">
+              <svg class="icon-check" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+              <span><strong>Seamless Re-Routing Guarantee:</strong> Instant re-booking on private flights and alternate 5-star suites if disruptions occur.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE ITINERARY EXPERIENCE (A DAY IN PARADISE)
+       ========================================================================= -->
+  <section class="itinerary-section" id="itinerary-showcase">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tagline">Signature Day Breakdown</span>
+        <h2 class="section-title">A Day in Paradise</h2>
+        <p class="section-subtitle">
+          Experience how our travelers enjoy their curated Maldives retreat. Click any timeline chapter to preview the moment.
+        </p>
+      </div>
+
+      <div class="itinerary-grid reveal-on-scroll">
+        <!-- Interactive Steps List -->
+        <div class="timeline-list">
+          <div class="timeline-step active" 
+               data-img="/images/hero-maldives.jpg" 
+               data-title="08:30 AM — Floating Villa Breakfast" 
+               data-caption="Fresh tropical pitaya bowls, French croissants, and freshly squeezed juices served in your private infinity plunge pool.">
+            <span class="step-time">08:30 AM</span>
+            <h4 class="step-heading">Floating Lagoon Breakfast</h4>
+            <p class="step-desc">Your private butler arranges a floating floral tray with champagne and artisanal treats in your infinity pool overlooking the turquoise sea.</p>
+          </div>
+
+          <div class="timeline-step" 
+               data-img="/images/bali.jpg" 
+               data-title="01:00 PM — Private Marine Safari" 
+               data-caption="Guided excursion with marine biologists to observe manta rays and gentle sea turtles in protected Baa Atoll reefs.">
+            <span class="step-time">01:00 PM</span>
+            <h4 class="step-heading">Private Coral Reef & Turtle Exploration</h4>
+            <p class="step-desc">Embark on a private handcrafted teak catamaran equipped with marine biologial sonar to swim alongside whale sharks.</p>
+          </div>
+
+          <div class="timeline-step" 
+               data-img="/images/amalfi.jpg" 
+               data-title="06:30 PM — Private Sunset Catamaran" 
+               data-caption="Champagne toast on the forward sundeck as the golden hour sun casts brilliant hues across the tranquil Indian Ocean.">
+            <span class="step-time">06:30 PM</span>
+            <h4 class="step-heading">Sunset Aperitivo & Yacht Cruise</h4>
+            <p class="step-desc">Sip vintage Dom Pérignon as pods of spinner dolphins glide beside your hull into the warm golden twilight.</p>
+          </div>
+
+          <div class="timeline-step" 
+               data-img="/images/dubai.jpg" 
+               data-title="09:00 PM — Lantern Sandbank Dinner" 
+               data-caption="A secluded private sandbank surrounded by 200 flickering torches and five courses prepared by an executive master chef.">
+            <span class="step-time">09:00 PM</span>
+            <h4 class="step-heading">Private Sandbank Lantern Gastronomy</h4>
+            <p class="step-desc">Dine with your toes in silky powdered sand beneath a canopy of unpolluted stars on an entirely private deserted sand cay.</p>
+          </div>
+        </div>
+
+        <!-- Visual Display Card -->
+        <div class="itinerary-visual-card">
+          <img id="itineraryVisualImg" src="/images/hero-maldives.jpg" alt="Itinerary Chapter Visual">
+          <div class="itinerary-visual-overlay">
+            <span class="visual-badge">✦ Curated Experience</span>
+            <h3 class="visual-title" id="itineraryVisualTitle">08:30 AM — Floating Villa Breakfast</h3>
+            <p class="visual-caption" id="itineraryVisualCaption">
+              Fresh tropical pitaya bowls, French croissants, and freshly squeezed juices served in your private infinity plunge pool.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       TRAVELLER STORIES & TESTIMONIALS
+       ========================================================================= -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tagline">Traveller Memoirs</span>
+        <h2 class="section-title">Memories That Last a Lifetime</h2>
+        <p class="section-subtitle">Read firsthand experiences from travelers who trusted RuleMyHoliday for their most important journeys.</p>
+      </div>
+
+      <div class="testimonials-grid reveal-on-scroll">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+          </div>
+          <p class="testimonial-quote">
+            “The Maldives overwater villa arranged by RuleMyHoliday was beyond our wildest dreams. When bad weather delayed our seaplane, our concierge had already arranged a private speedboat and an upgrade to the Sunset Presidential Villa before we even landed. That is true Zero Compromise.”
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Eleanor Sterling" class="author-avatar">
+            <div class="author-info">
+              <span class="author-name">Lady Eleanor Sterling</span>
+              <span class="author-trip">Maldives Honeymoon Villa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+          </div>
+          <p class="testimonial-quote">
+            “The AI Trip Planner gave us a brilliant outline, but the concierge brought it to life with private access to Ravello vineyards and our captained Riva boat along Capri. Truly the smoothest holiday experience we have ever had.”
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Marcus Davenport" class="author-avatar">
+            <div class="author-info">
+              <span class="author-name">Marcus Davenport</span>
+              <span class="author-trip">Amalfi Coast Anniversary</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.5L18 7.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1L10 1z"/></svg>
+          </div>
+          <p class="testimonial-quote">
+            “Sitting in the steaming cedar hot tub in Zermatt watching the Matterhorn glow under moonlight while our private chef prepared dinner... RuleMyHoliday delivers an echelon of travel that few agencies even comprehend.”
+          </p>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="Sophia Vance" class="author-avatar">
+            <div class="author-info">
+              <span class="author-name">Dr. Sophia Vance</span>
+              <span class="author-trip">Swiss Alps Winter Escape</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       LUXURY FOOTER
+       ========================================================================= -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Narrative -->
+        <div class="footer-brand-col">
+          <span class="footer-brand-text">RuleMyHoliday<span style="color: var(--accent-gold);">.</span>com</span>
+          <span class="footer-tagline">Customers First. Zero Compromise.</span>
+          <p class="footer-bio">
+            Curating ultra-luxury, uncompromising travel experiences across the world's most breathtaking sanctuaries. Bespoke planning, private aviation, and 24/7 dedicated concierge.
+          </p>
+          <div class="footer-certifications">
+            <span class="cert-pill">ATOL Protected</span>
+            <span class="cert-pill">IATA Accredited</span>
+            <span class="cert-pill">Virtuoso Partner</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Sanctuaries</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#curated-holidays">Maldives Private Atolls</a></li>
+            <li><a href="#curated-holidays">Amalfi Coast & Positano</a></li>
+            <li><a href="#curated-holidays">Swiss Alps & Zermatt</a></li>
+            <li><a href="#curated-holidays">Bali Jungle Sanctuaries</a></li>
+            <li><a href="#curated-holidays">Dubai Royal Desert</a></li>
+          </ul>
+        </div>
+
+        <!-- RuleMyHoliday Philosophy -->
+        <div>
+          <h4 class="footer-col-title">The Standard</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#standards">Customers First Promise</a></li>
+            <li><a href="#standards">Zero Compromise Vetting</a></li>
+            <li><a href="#hero">AI Trip Planner</a></li>
+            <li><a href="#itinerary-showcase">VIP Concierge Service</a></li>
+            <li><a href="tel:+917899365286">+91 78993 65286 (VIP Desk)</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div>
+          <h4 class="footer-col-title">Private Circle</h4>
+          <div class="newsletter-box">
+            <p class="newsletter-subtext">
+              Receive private invitations, unlisted villas, and seasonal previews.
+            </p>
+            <form class="newsletter-form" id="footerNewsletterForm">
+              <input type="email" class="newsletter-input" placeholder="Your email address" required>
+              <button type="submit" class="btn-newsletter-submit">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 RuleMyHoliday.com. All rights reserved. “The World, On Your Terms.”
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Concierge</a>
+          <a href="#">Security & Insurance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       FLOATING SIDE BUTTONS (RIGHT SIDE, FIXED)
+       ========================================================================= -->
+  <aside class="floating-side-actions" aria-label="Quick contact and AI triggers">
+    <!-- Illuminated Gold AI Trip Planner Floating Trigger -->
+    <button type="button" id="floatAiPlanner" class="floating-action-btn btn-float-ai trigger-ai-planner" aria-label="Plan Trip with AI Concierge">
+      <div class="ai-float-icon-wrap">
+        <svg class="ai-float-robot-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="10" rx="2"></rect>
+          <circle cx="12" cy="5" r="2"></circle>
+          <path d="M12 7v4"></path>
+          <line x1="8" y1="16" x2="8" y2="16"></line>
+          <line x1="16" y1="16" x2="16" y2="16"></line>
+        </svg>
+      </div>
+      <span class="floating-tooltip">AI Trip Planner</span>
+    </button>
+
+    <!-- Green WhatsApp Button -->
+    <a href="#" id="floatWhatsapp" class="floating-action-btn btn-float-whatsapp" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.2 1.26-1.68 1.32-.45.06-1.04.09-3.32-.86-2.91-1.21-4.78-4.2-4.92-4.39-.14-.19-1.18-1.57-1.18-2.99 0-1.42.74-2.12 1-2.41.26-.29.58-.36.77-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.3.48-.14.18-.31.39-.44.52-.14.15-.29.31-.13.59.17.28.75 1.24 1.6 2 .11.1.18.17.3.28 1.1 1.02 2.03 1.33 2.32 1.48.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.39-.24.65-.14.26.1 1.65.78 1.93.92.29.14.48.22.55.33.07.12.07.72-.17 1.4z"/>
+      </svg>
+      <span class="floating-tooltip">Chat with Travel Expert</span>
+    </a>
+
+    <!-- Dark Navy Call Us Button -->
+    <a href="tel:+917899365286" id="floatCall" class="floating-action-btn btn-float-call" aria-label="Call Concierge">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+      <span class="floating-tooltip">Call Us +91 78993 65286</span>
+    </a>
+  </aside>
+
+  <!-- =========================================================================
+       MODAL: INTERACTIVE AI TRIP PLANNER
+       ========================================================================= -->
+  <div class="modal-backdrop" id="aiPlannerModal" role="dialog" aria-modal="true" aria-labelledby="aiModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeAiModal" aria-label="Close dialog">✕</button>
+      <div class="modal-header-luxury">
+        <div class="modal-brand-badge">✦ Powered by RuleMyHoliday AI</div>
+        <h3 class="modal-title" id="aiModalTitle">AI Bespoke Trip Planner</h3>
+        <p class="modal-description">
+          Configure your travel style and our intelligent engine will tailor a 5-star, zero-compromise itinerary in seconds.
+        </p>
+      </div>
+
+      <div class="modal-body">
+        <div class="ai-form-group">
+          <label class="ai-form-label">1. Choose Your Holiday Vibe</label>
+          <div class="vibe-pills-grid">
+            <div class="vibe-choice-pill active" data-vibe="maldives">
+              <span>🏝️ Private Overwater Sanctuary</span>
+            </div>
+            <div class="vibe-choice-pill" data-vibe="amalfi">
+              <span>🛥️ Positano Cliffside & Riva Yacht</span>
+            </div>
+            <div class="vibe-choice-pill" data-vibe="swiss">
+              <span>🏔️ Zermatt Luxury Matterhorn Chalet</span>
+            </div>
+            <div class="vibe-choice-pill" data-vibe="maldives">
+              <span>🧘 Ubud Rainforest Wellness</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-form-group">
+          <label class="ai-form-label">2. Travel Duration</label>
+          <div class="ai-duration-slider">
+            <div class="duration-opt">5 Days</div>
+            <div class="duration-opt active">7 Days</div>
+            <div class="duration-opt">10 Days</div>
+            <div class="duration-opt">14 Days</div>
+          </div>
+        </div>
+
+        <button id="generateItineraryBtn" class="btn-search-submit" style="width: 100%; min-height: 52px;">
+          Generate Bespoke Itinerary ✦
+        </button>
+
+        <!-- Dynamic Results Card -->
+        <div class="ai-results-box" id="aiResultsBox"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: VIP CONCIERGE ENQUIRE NOW
+       ========================================================================= -->
+  <div class="modal-backdrop" id="enquireModal" role="dialog" aria-modal="true" aria-labelledby="enquireModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeEnquireModal" aria-label="Close dialog">✕</button>
+      <div class="modal-header-luxury">
+        <div class="modal-brand-badge">✦ Dedicated 24/7 Concierge</div>
+        <h3 class="modal-title" id="enquireModalTitle">Reserve Your Private Consultation</h3>
+        <p class="modal-description">
+          A Senior Travel Designer will review your requests and curate a personalized proposal with VIP upgrades.
+        </p>
+      </div>
+
+      <div class="modal-body">
+        <form id="enquireForm">
+          <div class="enquire-form-grid">
+            <div>
+              <label class="ai-form-label" for="enquireName">Full Name</label>
+              <input type="text" id="enquireName" class="luxury-input-field" placeholder="e.g. Lord Alexander Wright" required>
+            </div>
+            <div>
+              <label class="ai-form-label" for="enquireEmail">Email Address</label>
+              <input type="email" id="enquireEmail" class="luxury-input-field" placeholder="e.g. alexander@luxury.com" required>
+            </div>
+            <div>
+              <label class="ai-form-label" for="enquirePhone">Phone / WhatsApp</label>
+              <input type="tel" id="enquirePhone" class="luxury-input-field" placeholder="+91 78993 65286" required>
+            </div>
+            <div>
+              <label class="ai-form-label" for="enquireDestination">Destination / Package</label>
+              <input type="text" id="enquireDestination" class="luxury-input-field" placeholder="e.g. Maldives Lagoon Villa" required>
+            </div>
+            <div class="form-full-width">
+              <label class="ai-form-label" for="enquireNotes">Special Preferences / Requests</label>
+              <textarea id="enquireNotes" class="luxury-input-field" rows="3" placeholder="Private yacht transfers, Michelin chef preferences, anniversaries..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-search-submit" style="width: 100%; min-height: 52px;">
+            Submit VIP Request →
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       TOAST NOTIFICATION
+       ========================================================================= -->
+  <div class="luxury-toast" id="luxuryToast" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+    </svg>
+    <span class="toast-msg">Inquiry successfully submitted</span>
+  </div>
+
+  <!-- Main JavaScript Module -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

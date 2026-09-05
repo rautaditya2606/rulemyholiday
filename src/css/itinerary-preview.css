@@ -1,0 +1,191 @@
+/* ==========================================================================
+   INTERACTIVE ITINERARY SHOWCASE: A DAY IN PARADISE
+   ========================================================================== */
+
+.itinerary-section {
+  padding: 104px 0;
+  background-color: var(--color-white);
+}
+
+.itinerary-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Removed generic left golden line */
+.timeline-list::before {
+  display: none;
+}
+
+.timeline-step {
+  position: relative;
+  padding: 18px 22px;
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  border: 1.5px solid var(--color-slate-200);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+/* Removed generic golden dot */
+.timeline-step::before {
+  display: none;
+}
+
+.timeline-step:hover {
+  border-color: rgba(26, 43, 74, 0.25);
+  background: var(--color-slate-50);
+  box-shadow: var(--shadow-md);
+}
+
+.timeline-step.active {
+  background: #FFFFFF;
+  border-color: var(--primary-navy);
+  box-shadow: 0 10px 24px -6px rgba(15, 26, 45, 0.12),
+              0 0 0 1px var(--primary-navy);
+}
+
+.step-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-navy);
+  background: var(--color-slate-100);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+  transition: all var(--duration-fast);
+}
+
+.timeline-step.active .step-time {
+  background: rgba(201, 146, 10, 0.12);
+  color: var(--accent-gold-dark);
+}
+
+.step-heading {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 6px;
+}
+
+.step-desc {
+  font-size: 0.88rem;
+  color: var(--color-slate-600);
+  line-height: 1.5;
+}
+
+/* Visual Mockup Card for the Active Step */
+.itinerary-visual-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 2px solid var(--accent-gold-border);
+}
+
+.itinerary-visual-card img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.itinerary-visual-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 32px 28px;
+  background: linear-gradient(0deg, rgba(15, 26, 45, 0.95) 0%, rgba(15, 26, 45, 0.4) 60%, transparent 100%);
+  color: var(--color-white);
+}
+
+.visual-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+}
+
+.visual-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.visual-caption {
+  font-size: 0.88rem;
+  color: var(--color-slate-300);
+}
+
+@media (max-width: 960px) {
+  .itinerary-section {
+    padding: 64px 0;
+  }
+
+  .itinerary-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .itinerary-visual-card img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .itinerary-section {
+    padding: 52px 0;
+  }
+
+  .timeline-list {
+    padding-left: 0;
+    gap: 12px;
+  }
+
+  .timeline-step {
+    padding: 14px 16px;
+  }
+
+  .step-heading {
+    font-size: 1.05rem;
+  }
+
+  .step-desc {
+    font-size: 0.82rem;
+  }
+
+  .itinerary-visual-card img {
+    height: 260px;
+  }
+
+  .itinerary-visual-overlay {
+    padding: 18px 16px;
+  }
+
+  .visual-title {
+    font-size: 1.2rem;
+  }
+}

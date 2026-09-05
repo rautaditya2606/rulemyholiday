@@ -1,0 +1,294 @@
+/* ==========================================================================
+   CURATED SIGNATURE COLLECTIONS
+   ========================================================================== */
+
+.curated-holidays-section {
+  padding: 96px 0;
+  background-color: var(--color-ivory);
+}
+
+/* Category Filter Tabs */
+.filter-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.filter-tab-pill {
+  padding: 9px 22px;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-slate-600);
+  background: var(--color-white);
+  border: 1px solid var(--color-slate-200);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.filter-tab-pill:hover {
+  border-color: var(--accent-gold);
+  color: var(--primary-navy);
+}
+
+.filter-tab-pill.active {
+  background: var(--primary-navy);
+  color: var(--color-white);
+  border-color: var(--primary-navy);
+  box-shadow: 0 4px 12px rgba(26, 43, 74, 0.2);
+}
+
+/* Destinations Cards Grid */
+.holidays-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.holiday-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(26, 43, 74, 0.08);
+  transition: box-shadow var(--duration-normal) var(--ease-smooth),
+              border-color var(--duration-normal) var(--ease-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.holiday-card:hover {
+  box-shadow: 0 16px 36px -4px rgba(15, 26, 45, 0.12);
+  border-color: rgba(201, 146, 10, 0.4);
+}
+
+.card-media-wrap {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-media-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-editorial), filter 0.6s ease;
+}
+
+.holiday-card:hover .card-media-wrap img {
+  transform: scale(1.02);
+  filter: contrast(1.03);
+}
+
+.card-tag-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(15, 26, 45, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--color-white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(201, 146, 10, 0.3);
+}
+
+.card-duration-badge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary-navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent-gold);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+.card-location svg {
+  width: 14px;
+  height: 14px;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: var(--color-slate-600);
+  line-height: 1.55;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.card-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-slate-100);
+}
+
+.perk-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+  background: var(--color-slate-100);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-price-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-price-label {
+  font-size: 0.7rem;
+  color: var(--color-slate-400);
+  text-transform: uppercase;
+}
+
+.card-price {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+}
+
+.card-price span {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-slate-500);
+}
+
+.btn-card-explore {
+  padding: 9px 20px;
+  background: var(--primary-navy);
+  color: var(--color-white);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(26, 43, 74, 0.2);
+  box-shadow: 0 2px 8px rgba(15, 26, 45, 0.12);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+.btn-card-explore:hover {
+  background: var(--primary-navy-dark);
+  border-color: var(--accent-gold);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(15, 26, 45, 0.25),
+              inset 0 0 0 1px rgba(201, 146, 10, 0.3);
+}
+
+.btn-card-explore:active {
+  background: var(--primary-navy-surface);
+}
+
+@media (max-width: 1024px) {
+  .holidays-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .curated-holidays-section {
+    padding: 56px 0;
+  }
+
+  .filter-tabs-wrapper {
+    gap: 8px;
+    margin-bottom: 28px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+  }
+
+  .filter-tab-pill {
+    padding: 7px 16px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .holidays-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card-media-wrap {
+    height: 210px;
+  }
+
+  .card-body {
+    padding: 18px 16px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-desc {
+    font-size: 0.84rem;
+    margin-bottom: 14px;
+  }
+
+  .card-perks {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .card-price {
+    font-size: 1.2rem;
+  }
+
+  .btn-card-explore {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
