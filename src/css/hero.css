@@ -13,7 +13,7 @@
   background-color: var(--primary-navy-dark);
 }
 
-/* Ken Burns Background Animation (1.0 to 1.08 over 8s) */
+/* Hero Background Video & Fallback Image */
 .hero-bg-wrapper {
   position: absolute;
   top: 0;
@@ -22,13 +22,19 @@
   height: 100%;
   z-index: 1;
   overflow: hidden;
+  background-color: var(--primary-navy-dark);
 }
 
+.hero-bg-video,
 .hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center right;
+  pointer-events: none;
 }
 
 /* Dark Gradient Overlay: Left side dark so text is readable, right side stays visible */

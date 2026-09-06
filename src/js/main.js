@@ -6,6 +6,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const { openEnquire, showToast } = initBookingModal();
   initAIPlanner(openEnquire);
 
+  // Ensure Hero Background Video Autoplays reliably
+  const heroVideo = document.getElementById('heroBgVideo');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Fallback handled gracefully by poster
+      });
+    }
+  }
+
   // 2. Navbar Solid Navy on Scroll
   const navbar = document.getElementById('mainNavbar');
   const handleScroll = () => {
