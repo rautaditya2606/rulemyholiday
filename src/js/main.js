@@ -79,13 +79,29 @@ document.addEventListener('DOMContentLoaded', () => {
     custom: 'Tell us your dream holiday vision...'
   };
 
+  const searchSubmitBtn = document.querySelector('.btn-search-submit span');
+  const searchBtnLabels = {
+    holidays: 'Explore Now',
+    flights: 'Search Flights',
+    hotels: 'Find Luxury Stays',
+    experiences: 'Explore Experiences',
+    custom: 'Plan Custom Trip'
+  };
+
+  let currentTabType = 'holidays';
+
   searchTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       searchTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      const tabType = tab.dataset.tab;
-      if (destinationInput && searchPlaceholderMap[tabType]) {
-        destinationInput.placeholder = searchPlaceholderMap[tabType];
+      currentTabType = tab.dataset.tab;
+
+      if (destinationInput && searchPlaceholderMap[currentTabType]) {
+        destinationInput.placeholder = searchPlaceholderMap[currentTabType];
+      }
+
+      if (searchSubmitBtn && searchBtnLabels[currentTabType]) {
+        searchSubmitBtn.textContent = searchBtnLabels[currentTabType];
       }
     });
   });
@@ -119,6 +135,25 @@ document.addEventListener('DOMContentLoaded', () => {
     searchForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const dest = destinationInput?.value.trim() || 'Maldives';
+
+      if (currentTabType === 'custom') {
+        const aiModal = document.getElementById('aiPlannerModal');
+        if (aiModal) {
+          aiModal.classList.add('is-active');
+          showToast('Opening Bespoke Custom Trip Planner...');
+          return;
+        }
+      }
+
+      if (currentTabType === 'experiences') {
+        const expSection = document.getElementById('experiences');
+        if (expSection) {
+          expSection.scrollIntoView({ behavior: 'smooth' });
+          showToast('Showing Curated Signature Experiences...');
+          return;
+        }
+      }
+
       showToast(`Searching bespoke packages for "${dest}"...`);
       const curatedSection = document.getElementById('curated-holidays');
       if (curatedSection) {
