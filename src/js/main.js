@@ -6,32 +6,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const { openEnquire, showToast } = initBookingModal();
   initAIPlanner(openEnquire);
 
-  // Ensure Hero Background Video Autoplays reliably & pauses when offscreen (saving GPU & memory)
+  // Ensure Hero Background Video plays smoothly and uninterrupted
   const heroVideo = document.getElementById('heroBgVideo');
   if (heroVideo) {
     heroVideo.muted = true;
-    const playPromise = heroVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Fallback handled gracefully by poster
-      });
-    }
+    heroVideo.defaultMuted = true;
 
-    if ('IntersectionObserver' in window) {
-      const heroObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            if (heroVideo.paused) {
-              heroVideo.play().catch(() => {});
-            }
-          } else {
-            if (!heroVideo.paused) {
-              heroVideo.pause();
-            }
-          }
+    const playVideo = () => {
+      const p = heroVideo.play();
+      if (p !== undefined) {
+        p.catch(() => {
+          // If browser policy blocked autoplay, resume on first user interaction
+          const resumeOnAction = () => {
+            heroVideo.play().catch(() => {});
+            window.removeEventListener('touchstart', resumeOnAction);
+            window.removeEventListener('click', resumeOnAction);
+          };
+          window.addEventListener('touchstart', resumeOnAction, { once: true, passive: true });
+          window.addEventListener('click', resumeOnAction, { once: true, passive: true });
         });
-      }, { threshold: 0.05 });
-      heroObserver.observe(heroVideo);
+      }
+    };
+
+    if (heroVideo.readyState >= 2) {
+      playVideo();
+    } else {
+      heroVideo.addEventListener('canplay', playVideo, { once: true });
     }
   }
 

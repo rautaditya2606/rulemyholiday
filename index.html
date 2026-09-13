@@ -137,10 +137,19 @@
         poster="/images/hero-couple-beach-poster.jpg"
         aria-hidden="true"
       >
-        <source src="/videos/hero-couple-beach-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+        <source src="/videos/hero-couple-beach.webm" type="video/webm">
         <source src="/videos/hero-couple-beach.mp4" type="video/mp4">
         <img src="/images/hero-couple-beach-poster.jpg" alt="Couple holding hands walking along tropical beach resort" class="hero-bg-image">
       </video>
+      <script>
+        (function() {
+          var v = document.getElementById('heroBgVideo');
+          if (v && window.innerWidth <= 768) {
+            var canWebM = v.canPlayType && (v.canPlayType('video/webm; codecs="vp9"') || v.canPlayType('video/webm'));
+            v.src = canWebM ? '/videos/hero-couple-beach-mobile.webm' : '/videos/hero-couple-beach-mobile.mp4';
+          }
+        })();
+      </script>
     </div>
 
     <!-- Dark Gradient Overlay (Left side dark for readability, right side stays visible) -->

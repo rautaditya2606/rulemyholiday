@@ -35,6 +35,11 @@
   object-fit: cover;
   object-position: center right;
   pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Dark Gradient Overlay: Left side dark so text is readable, right side stays visible */
@@ -46,6 +51,8 @@
   height: 100%;
   z-index: 2;
   pointer-events: none;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
   background: linear-gradient(
     90deg,
     rgba(15, 26, 45, 0.94) 0%,
@@ -90,18 +97,18 @@
   justify-content: space-between;
 }
 
-/* Luxury Editorial Frosted Showcase for Text */
+/* Luxury Editorial Showcase for Text - GPU Accelerated Without Lag */
 .hero-text-card {
   max-width: 680px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 242, 0.90) 100%);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.97) 0%, rgba(250, 248, 242, 0.94) 100%);
   padding: 48px 52px;
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.95);
   box-shadow: 0 32px 72px -16px rgba(10, 18, 32, 0.35),
               0 0 0 1px rgba(201, 146, 10, 0.16);
   position: relative;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 /* Staggered Fade-Up Animations on Load */
