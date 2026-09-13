@@ -233,7 +233,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 11. Scroll-Triggered Fade-In for Each Section (IntersectionObserver)
+  // 11. FAQ Accordion Toggles
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-question-btn');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const isCurrentlyActive = item.classList.contains('active');
+        faqItems.forEach(i => {
+          i.classList.remove('active');
+          const qBtn = i.querySelector('.faq-question-btn');
+          if (qBtn) qBtn.setAttribute('aria-expanded', 'false');
+        });
+
+        if (!isCurrentlyActive) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
+
+  // 12. Scroll-Triggered Fade-In for Each Section (IntersectionObserver)
   const revealElements = document.querySelectorAll('.reveal-on-scroll');
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {

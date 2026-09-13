@@ -5,7 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RuleMyHoliday.com | The World, On Your Terms | Bespoke Luxury Travel</title>
   <meta name="description" content="Award-winning luxury travel experiences curated to perfection. From private island overwater sanctuaries to alpine chalets. The world, on your terms.">
+  <meta name="theme-color" content="#0F1A2D">
+  <link rel="canonical" href="https://rulemyholiday.com/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rulemyholiday.com/">
+  <meta property="og:title" content="RuleMyHoliday.com | The World, On Your Terms">
+  <meta property="og:description" content="Award-winning luxury travel experiences curated to perfection. Private island sanctuaries, bespoke yacht expeditions, and rare cultural voyages.">
+  <meta property="og:image" content="/images/hero-couple-beach-poster.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RuleMyHoliday.com | Bespoke Luxury Travel">
+  <meta name="twitter:description" content="Private island sanctuaries, bespoke yacht expeditions, and rare cultural voyages. Handcrafted exclusively for those who demand the extraordinary.">
+  <meta name="twitter:image" content="/images/hero-couple-beach-poster.jpg">
+
+  <!-- JSON-LD Structured Data: Schema.org TravelAgency -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "RuleMyHoliday",
+    "url": "https://rulemyholiday.com",
+    "logo": "https://rulemyholiday.com/favicon.svg",
+    "image": "https://rulemyholiday.com/images/hero-couple-beach-poster.jpg",
+    "description": "Curating ultra-luxury, uncompromising travel experiences across the world's most breathtaking sanctuaries. Bespoke planning, private aviation, and 24/7 dedicated concierge.",
+    "telephone": "+917899365286",
+    "priceRange": "$$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://instagram.com/rulemyholiday"
+    ]
+  }
+  </script>
 
   <!-- Premium Typography: Playfair Display & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +60,7 @@
   <link rel="stylesheet" href="/src/css/standards.css">
   <link rel="stylesheet" href="/src/css/itinerary-preview.css">
   <link rel="stylesheet" href="/src/css/testimonials.css">
+  <link rel="stylesheet" href="/src/css/faq.css">
   <link rel="stylesheet" href="/src/css/footer.css">
   <link rel="stylesheet" href="/src/css/modals.css">
   <link rel="stylesheet" href="/src/css/floating-side.css">
@@ -866,6 +904,73 @@
   </section>
 
   <!-- =========================================================================
+       FREQUENTLY ASKED QUESTIONS (LUXURY TRAVEL ACCORDION)
+       ========================================================================= -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <span class="section-tagline">Answers & Insights</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Everything you need to know about our bespoke travel design, private aviation, and zero-compromise client guarantees.
+        </p>
+      </div>
+
+      <div class="faq-accordion-wrap reveal-on-scroll">
+        <div class="faq-item active">
+          <button class="faq-question-btn" aria-expanded="true">
+            <span>How does RuleMyHoliday craft bespoke private itineraries?</span>
+            <svg class="faq-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Every itinerary begins with a one-on-one consultation with a Senior Travel Designer. Rather than standard catalog packages, we custom-engineer each journey around your personal passions—securing unlisted private island estates, Michelin-starred culinary reservations, and private aviation connections with zero friction.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>What VIP concierge benefits are included with every booking?</span>
+            <svg class="faq-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Every RuleMyHoliday guest receives a 24/7 dedicated concierge accessible via direct WhatsApp and encrypted VIP line. Perks include complimentary room category upgrades, daily gourmet champagne breakfasts, $100–$250 resort credits, priority early check-in, late check-out, and on-the-ground luxury chauffeured transfers.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>Can RuleMyHoliday arrange private aviation and yacht charters?</span>
+            <svg class="faq-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Through our global network of ARGUS Platinum and Wyvern-certified aviation operators, we orchestrate point-to-point private jet charters, helicopter transfers to alpine peaks, and superyacht charters with full captain, crew, and private sommelier service.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>What is your Seamless Re-Routing & Financial Protection Guarantee?</span>
+            <svg class="faq-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Your investment is 100% safeguarded under comprehensive IATA and ATOL accreditation. If flight delays, weather, or unexpected disruptions occur, our concierge proactively re-routes your flights and secures alternative 5-star suites before you even arrive at the terminal—at zero extra cost to you.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>How do I begin planning my next holiday?</span>
+            <svg class="faq-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>You can use our interactive AI Trip Planner to preview a tailored concept in seconds, click 'Enquire Now' on any collection, or reach our concierge directly via phone (+91 78993 65286) or WhatsApp. A Senior Travel Designer will be assigned to your vision immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
        LUXURY FOOTER
        ========================================================================= -->
   <footer class="site-footer" id="footer">
@@ -956,7 +1061,7 @@
     </button>
 
     <!-- Green WhatsApp Button -->
-    <a href="#" id="floatWhatsapp" class="floating-action-btn btn-float-whatsapp" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/917899365286?text=Hello%20RuleMyHoliday%2C%20I%20would%20like%20to%20inquire%20about%20a%20bespoke%20holiday%20experience." id="floatWhatsapp" class="floating-action-btn btn-float-whatsapp" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24">
         <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.07c-.24.68-1.2 1.26-1.68 1.32-.45.06-1.04.09-3.32-.86-2.91-1.21-4.78-4.2-4.92-4.39-.14-.19-1.18-1.57-1.18-2.99 0-1.42.74-2.12 1-2.41.26-.29.58-.36.77-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.15.31-.3.48-.14.18-.31.39-.44.52-.14.15-.29.31-.13.59.17.28.75 1.24 1.6 2 .11.1.18.17.3.28 1.1 1.02 2.03 1.33 2.32 1.48.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.39-.24.65-.14.26.1 1.65.78 1.93.92.29.14.48.22.55.33.07.12.07.72-.17 1.4z"/>
       </svg>
