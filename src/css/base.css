@@ -56,6 +56,20 @@ input, select, textarea {
   padding-right: 24px;
 }
 
+@media (max-width: 640px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
 .section-header {
   text-align: center;
   margin-bottom: 56px;
@@ -88,6 +102,28 @@ input, select, textarea {
   max-width: 620px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 640px) {
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .section-tagline {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-size: clamp(1.65rem, 6.8vw, 2.15rem);
+    margin-bottom: 12px;
+  }
+
+  .section-subtitle {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
 }
 
 /* Scroll reveal helper - Calm, graceful fade with zero bounce or shift */

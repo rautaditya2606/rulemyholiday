@@ -273,27 +273,29 @@
 /* Responsiveness */
 @media (max-width: 960px) {
   .search-section {
-    margin-top: -44px;
+    margin-top: -36px;
     padding-bottom: 20px;
   }
 
   .search-card-wrapper {
     border-radius: var(--radius-lg);
-    padding: 12px 12px 18px;
+    padding: 12px 14px 18px;
   }
 
   .search-tabs {
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
     gap: 6px;
-    padding-bottom: 6px;
+    padding: 4px 2px 8px 2px;
     margin-bottom: 12px;
   }
 
   .search-tab-btn {
-    scroll-snap-align: start;
-    padding: 8px 15px;
+    padding: 8px 16px;
     font-size: 0.84rem;
+    flex-shrink: 0;
+    min-height: 38px;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .search-form {
@@ -304,36 +306,62 @@
 
   .search-field {
     padding: 10px 14px;
+    min-height: 54px;
   }
 
   /* Prevent iOS zoom on inputs by ensuring >= 16px font-size */
   .field-input {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 
   .btn-search-submit {
     width: 100%;
     min-height: 52px;
-    font-size: 0.95rem;
+    font-size: 0.96rem;
+    margin-top: 4px;
   }
 
   .search-dropdown {
     width: 100%;
     min-width: 0;
+    max-height: 260px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
 @media (max-width: 480px) {
   .search-section {
-    margin-top: -32px;
+    margin-top: -24px;
+    padding-bottom: 16px;
   }
 
   .search-card-wrapper {
+    padding: 10px 10px 16px;
     box-shadow: 0 16px 40px -10px rgba(15, 26, 45, 0.16);
+    border-radius: var(--radius-md);
+  }
+
+  .search-tab-btn {
+    padding: 7px 13px;
+    font-size: 0.8rem;
   }
 
   .field-icon {
     width: 34px;
     height: 34px;
+  }
+
+  .field-label {
+    font-size: 0.68rem;
+  }
+
+  .field-input {
+    font-size: 16px !important;
+  }
+
+  .btn-search-submit {
+    min-height: 50px;
+    font-size: 0.92rem;
   }
 }

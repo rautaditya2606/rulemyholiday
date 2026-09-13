@@ -136,34 +136,62 @@
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .floating-side-actions {
-    right: 16px;
-    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    right: 14px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
     gap: 10px;
     z-index: 995;
   }
 
   .floating-action-btn {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
     box-shadow: 0 6px 18px rgba(15, 26, 45, 0.3);
   }
 
   .ai-float-robot-svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .btn-float-whatsapp svg {
     width: 22px;
     height: 22px;
   }
 
-  .btn-float-whatsapp svg {
-    width: 24px;
-    height: 24px;
-  }
-
   .btn-float-call svg {
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
   }
 
   .floating-tooltip {
     display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .floating-side-actions {
+    right: 10px;
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    gap: 8px;
+  }
+
+  .floating-action-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .ai-float-robot-svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .btn-float-whatsapp svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn-float-call svg {
+    width: 17px;
+    height: 17px;
   }
 }

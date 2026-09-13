@@ -141,18 +141,18 @@
 
 @media (max-width: 600px) {
   .standards-section {
-    padding: 52px 0;
+    padding: 48px 0;
   }
 
   .standard-card.ordinary-card,
   .standard-card.rule-card {
-    padding: 24px 18px;
+    padding: 22px 18px;
     border-radius: var(--radius-lg);
   }
 
   .standard-card-header {
-    margin-bottom: 18px;
-    padding-bottom: 14px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
   }
 
   .standard-card-title {
@@ -173,5 +173,22 @@
   .standard-feature-item {
     font-size: 0.85rem;
     gap: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .standard-card.ordinary-card,
+  .standard-card.rule-card {
+    padding: 18px 14px;
+    border-radius: var(--radius-md);
+  }
+
+  .standard-card-title {
+    font-size: 1.05rem;
+  }
+
+  .standard-feature-item {
+    font-size: 0.8rem;
+    gap: 8px;
   }
 }

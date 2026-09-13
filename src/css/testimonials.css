@@ -86,7 +86,7 @@
 
 @media (max-width: 960px) {
   .testimonials-section {
-    padding: 64px 0;
+    padding: 60px 0;
   }
 
   .testimonials-grid {
@@ -101,10 +101,30 @@
 
 @media (max-width: 480px) {
   .testimonials-section {
-    padding: 52px 0;
+    padding: 44px 0;
+  }
+
+  .testimonial-card {
+    padding: 18px 16px;
+    border-radius: var(--radius-md);
   }
 
   .testimonial-quote {
     font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+
+  .author-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .author-name {
+    font-size: 0.86rem;
+  }
+
+  .author-trip {
+    font-size: 0.72rem;
   }
 }

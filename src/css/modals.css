@@ -309,38 +309,43 @@
    ========================================================================== */
 @media (max-width: 640px) {
   .modal-backdrop {
-    padding: 12px;
+    padding: 0;
     align-items: flex-end;
   }
 
   .modal-dialog {
-    max-height: 92vh;
-    border-radius: var(--radius-lg);
+    max-height: 90vh;
+    border-radius: 22px 22px 0 0;
+    border-bottom: none;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
   }
 
   .modal-header-luxury {
-    padding: 22px 20px 16px;
-    border-top-left-radius: var(--radius-lg);
-    border-top-right-radius: var(--radius-lg);
+    padding: 24px 20px 16px;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
   }
 
   .modal-close-btn {
     top: 14px;
     right: 14px;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
   }
 
   .modal-title {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
   }
 
   .modal-description {
-    font-size: 0.82rem;
+    font-size: 0.84rem;
   }
 
   .modal-body {
-    padding: 20px 16px;
+    padding: 20px 16px calc(24px + env(safe-area-inset-bottom, 16px));
   }
 
   .ai-form-group {
@@ -357,8 +362,9 @@
   }
 
   .luxury-input-field {
-    font-size: 16px;
-    padding: 11px 14px;
+    font-size: 16px !important;
+    padding: 12px 14px;
+    min-height: 48px;
   }
 
   .ai-itinerary-header {
@@ -372,7 +378,7 @@
     max-width: 400px;
     padding: 12px 18px;
     font-size: 0.82rem;
-    bottom: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
     border-radius: var(--radius-md);
   }
 }
@@ -384,17 +390,22 @@
   }
 
   .vibe-choice-pill {
-    padding: 10px 14px;
-    font-size: 0.84rem;
+    padding: 11px 14px;
+    font-size: 0.86rem;
+    min-height: 46px;
   }
 
   .ai-duration-slider {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
 
   .duration-opt {
-    flex: 1 1 calc(50% - 8px);
-    padding: 8px;
+    padding: 10px;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

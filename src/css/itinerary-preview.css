@@ -157,16 +157,22 @@
 
 @media (max-width: 600px) {
   .itinerary-section {
-    padding: 52px 0;
+    padding: 48px 0;
   }
 
   .timeline-list {
     padding-left: 0;
-    gap: 12px;
+    gap: 10px;
   }
 
   .timeline-step {
     padding: 14px 16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .step-time {
+    font-size: 0.72rem;
+    padding: 3px 10px;
   }
 
   .step-heading {
@@ -178,14 +184,40 @@
   }
 
   .itinerary-visual-card img {
-    height: 260px;
+    height: 240px;
   }
 
   .itinerary-visual-overlay {
     padding: 18px 16px;
   }
 
+  .visual-badge {
+    font-size: 0.68rem;
+  }
+
   .visual-title {
-    font-size: 1.2rem;
+    font-size: 1.18rem;
+  }
+
+  .visual-caption {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .timeline-step {
+    padding: 12px 14px;
+  }
+
+  .step-heading {
+    font-size: 0.98rem;
+  }
+
+  .step-desc {
+    font-size: 0.78rem;
+  }
+
+  .itinerary-visual-card img {
+    height: 210px;
   }
 }

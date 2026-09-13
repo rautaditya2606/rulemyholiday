@@ -48,6 +48,24 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
       });
     });
+
+    // Close when clicking outside menu
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('is-open') && !navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navMenu.classList.remove('is-open');
+        navToggle.classList.remove('is-active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('is-open')) {
+        navMenu.classList.remove('is-open');
+        navToggle.classList.remove('is-active');
+        document.body.style.overflow = '';
+      }
+    });
   }
 
   // 4. Search Bar Tabs: Holidays (active), Flights, Hotels, Experiences, Custom Trip
