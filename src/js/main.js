@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const { openEnquire, showToast } = initBookingModal();
   initAIPlanner(openEnquire);
 
-  // Ensure Hero Background Video Autoplays reliably
+  // Ensure Hero Background Video Autoplays reliably & pauses when offscreen (saving GPU & memory)
   const heroVideo = document.getElementById('heroBgVideo');
   if (heroVideo) {
     heroVideo.muted = true;
@@ -15,6 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
       playPromise.catch(() => {
         // Fallback handled gracefully by poster
       });
+    }
+
+    if ('IntersectionObserver' in window) {
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (heroVideo.paused) {
+              heroVideo.play().catch(() => {});
+            }
+          } else {
+            if (!heroVideo.paused) {
+              heroVideo.pause();
+            }
+          }
+        });
+      }, { threshold: 0.05 });
+      heroObserver.observe(heroVideo);
     }
   }
 
